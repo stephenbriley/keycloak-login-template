@@ -13,3 +13,21 @@ docker run command
                             -p 443:8443 \
                             quay.io/keycloak/keycloak:23.0.7 \
                             start-dev
+
+
+├── tlspc-theme
+│   └── login
+│       ├── login.ftl
+│       ├── messages
+│       │   └── messages_en.properties
+│       ├── resources
+│       │   ├── css
+│       │   │   └── styles.css
+│       │   └── img
+│       │       ├── ct-logo.svg
+│       │       ├── ct-logo.svg.orig
+│       │       ├── id2JdYV30G.svg
+│       │       └── idD2jzDRRk.svg
+│       ├── template.ftl
+│       └── theme.properties
+

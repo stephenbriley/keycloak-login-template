@@ -1,0 +1,15 @@
+docker run command
+                docker run --name keycloak2 \
+                            -e KEYCLOAK_ADMIN=admin \
+                            -e KEYCLOAK_ADMIN_PASSWORD=thepassword \
+                            -e KC_LOG_LEVEL=WARN \
+                            -e KC_HTTPS_CERTIFICATE_FILE=/opt/keycloak/conf/server.crt.pem \
+                            -e KC_HTTPS_CERTIFICATE_KEY_FILE=/opt/keycloak/conf/server.key.pem \
+                            -v /opt/letsencryptcerts/fullchain.pem:/opt/keycloak/conf/server.crt.pem \
+                            -v /opt/letsencryptcerts/privkey.pem:/opt/keycloak/conf/server.key.pem \
+                            -v /home/ubuntu:/opt/keycloak/themes\
+                            --restart=always \
+                            -d \
+                            -p 443:8443 \
+                            quay.io/keycloak/keycloak:23.0.7 \
+                            start-dev
